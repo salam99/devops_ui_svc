@@ -9,7 +9,7 @@ pipeline {
         stage('Run the tests') {
              agent {
                 any { 
-                    image 'node:14-alpine'
+                    image 'node:18-alpine'
                     args '-e HOME=/tmp -e NPM_CONFIG_PREFIX=/tmp/.npm'
                     reuseNode true
                 }
