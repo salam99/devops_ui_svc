@@ -1,5 +1,5 @@
 const chai = require('chai');
-const nock = require('nock');
+//const nock = require('nock');
 const request = require('supertest');
 const app = require('../server');
 
@@ -7,7 +7,7 @@ describe('GET /', function () {
   it('responds with home page', function (done) {
 
     //specify the url to be intercepted
-    nock("http://localhost:8082")
+    //nock("http://localhost:8082")
       //define the method to be intercepted
       .get('/events')
       //respond with a OK and the specified JSON response
@@ -37,7 +37,7 @@ describe('GET /', function () {
 
   it('should display page when the backend is down', function (done) {
     //specify the url to be intercepted
-    nock("http://localhost:8082")
+    //nock("http://localhost:8082")
       //define the method to be intercepted
       .get('/events')
       //respond with an error
@@ -66,7 +66,7 @@ describe('POST /event', function () {
   it('adds an event', function (done) {
   const data = { title: 'test event', description: 'even cooler test' };
     //specify the url to be intercepted
-    nock("http://localhost:8082")
+    //nock("http://localhost:8082")
       //define the method to be intercepted
       .post('/event')
       //respond with a OK and the specified JSON response
