@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        registryCredential = 'dockerhub'
+        registryCredential = 'salam9920'
         imageName = 'salam9920/internal'
         dockerImage = ''
         }
